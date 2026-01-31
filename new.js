@@ -61,12 +61,7 @@ function renderRates() {
 function changeValute() {
     columnValute.addEventListener('click', (event) => {
         if(event.target.classList.contains('all-valute__char-code')) {
-            columnValute.innerHTML = ''
-            valuteName = [];
-            valuteRates = [];
-            chagesValute.textContent = 0
-            inputValue.value = ''
-            conversList.value = ''
+            clearAll()
             const currencyCode = event.target.textContent;
             loadExchangeRate(currencyCode)
             addConversValute()
@@ -98,6 +93,16 @@ function findActualPrice(data) {
             }
         }
     })
+}
+
+function clearAll() {
+    columnValute.innerHTML = ''
+    valuteName = [];
+    valuteRates = [];
+    chagesValute.textContent = 0
+    inputValue.value = ''
+    conversList.value = ''
+    actualPrice = 0
 }
 
 inputValue.addEventListener('input', function(e) {

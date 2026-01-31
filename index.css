@@ -25,11 +25,13 @@ body {
 .all-valute__wrap {
     display: flex;
     text-align: center;
+    justify-self: center;
 
     border: 1px solid black;
     overflow: auto;
     
     max-height: 650px;
+    margin-top: 25px;
     width: 250px;
 }
 
@@ -44,7 +46,7 @@ body {
 
 .convers__wrap {
     text-align: center;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .convers-input {
@@ -57,6 +59,4 @@ body {
     font-size: 20px;
     width: auto;
     text-align: center;
-
-
 }
